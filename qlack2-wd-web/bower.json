@@ -26,7 +26,7 @@
     "lodash": "4.8.2",
     "oclazyload": "1.0.9",
     "atmosphere.js": "atmosphere#2.3.1",
-    "qlack2-bower-angular-pubsub": "1.0.5",
+    "qlack2-bower-angular-pubsub": "1.0.7",
     "angular-img-http-src": "^0.1.0"
   },
   "devDependencies": {
@@ -50,6 +50,7 @@
   "resolutions": {
     "jquery": "2.1.4",
     "angular": "1.5.2",
-    "lodash": "4.8.2"
+    "lodash": "4.8.2",
+    "qlack2-bower-pubsub": "1.0.6"
   }
 }
