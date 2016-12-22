@@ -36,6 +36,7 @@ feature:repo-add mvn:com.eurodyn.qlack2.webdesktop/qlack2-wd-karaf-features/2.0.
 	</feature>
 	
 	<feature description="Qlack - Webdesktop dependencies" name="qlack2-wd-deps" version="${project.version}">
+		<feature prerequisite="true">qlack2-util-repack-cxf-conf</feature>
 		<feature>cxf-jaxrs</feature>
 		<feature>cxf-rs-security-cors</feature>
 		<feature>pax-cdi</feature>
@@ -49,7 +50,6 @@ feature:repo-add mvn:com.eurodyn.qlack2.webdesktop/qlack2-wd-karaf-features/2.0.
 		<feature>qlack2-fuse-AAA</feature>
 		<feature>qlack2-fuse-lexicon</feature>
 		<feature>qlack2-common-util</feature>
-		<feature>qlack2-util-repack-cxf-conf</feature>
 		<feature>qlack2-util-rest</feature>
 		<feature>qlack2-util-atmosphere</feature>
 		<feature>qlack2-util-repack-jackson-rs</feature>
@@ -64,6 +64,7 @@ feature:repo-add mvn:com.eurodyn.qlack2.webdesktop/qlack2-wd-karaf-features/2.0.
 
 	<!-- Configuration files -->
 	<feature name="qlack2-wd-config" version="${project.version}">
+		<feature prerequisite="true">qlack2-util-repack-cxf-conf</feature>
 		<configfile finalname="/etc/com.eurodyn.qlack2.util.liquibase.cfg">mvn:com.eurodyn.qlack2.webdesktop/qlack2-wd-config/${project.version}/cfg/liquibase</configfile>
 		<configfile finalname="/etc/org.ops4j.datasource-wd.cfg">mvn:com.eurodyn.qlack2.webdesktop/qlack2-wd-config/${project.version}/cfg/database</configfile>
 		<configfile finalname="/etc/com.eurodyn.qlack2.wd.web.api.cfg">mvn:com.eurodyn.qlack2.webdesktop/qlack2-wd-config/${project.version}/cfg/wdapi</configfile>
